@@ -5,20 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Fact Check</title>
     <script src="popup.js" defer></script>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 10px; text-align: center; }
-        button { padding: 8px 12px; font-size: 14px; cursor: pointer; margin-top: 10px; }
-        #apiKeyContainer { margin-top: 10px; }
-        #apiKeyInput { padding: 5px; font-size: 14px; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="toggle-key">API-Key Eingabe anzeigen</button>
-    <div id="apiKeyContainer" style="display: none;">
-        <input type="text" id="apiKeyInput" placeholder="API Key eingeben">
-        <button id="saveApiKey">Speichern</button>
+    <div class="noPadding" style="display: flex; justify-content: flex-end; width: 100%;">
+        <button id="settings-btn" style="margin-bottom: 30px; padding: 2px; align-self: flex-end;">
+            <img src="img/settings.png" style="height: 20px; margin: 2px;">
+        </button>
     </div>
-    <button id="save-btn">Check</button>
-    <p id="status"></p>
+    <div class="noPadding" style="width: 200px">
+        <button id="save-btn">Check</button>
+        <p id="status"></p>
+    </div>
 </body>
 </html>
