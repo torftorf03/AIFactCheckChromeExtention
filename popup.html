@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fact Check</title>
+    <script src="popup.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 10px; text-align: center; }
+        button { padding: 8px 12px; font-size: 14px; cursor: pointer; margin-top: 10px; }
+        #apiKeyContainer { margin-top: 10px; }
+        #apiKeyInput { padding: 5px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <button id="toggle-key">API-Key Eingabe anzeigen</button>
+    <div id="apiKeyContainer" style="display: none;">
+        <input type="text" id="apiKeyInput" placeholder="API Key eingeben">
+        <button id="saveApiKey">Speichern</button>
+    </div>
+    <button id="save-btn">Check</button>
+    <p id="status"></p>
+</body>
+</html>
