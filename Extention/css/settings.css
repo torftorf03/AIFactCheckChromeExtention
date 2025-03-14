@@ -54,3 +54,7 @@ html, body {
     align-items: center;
     justify-content: center;
 }
+
+.speichern-button {
+    margin-top: 30px;
+}
