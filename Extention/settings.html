@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Fact Check - Einstellungen</title>
 
-    <script src="js/browser.js" defer></script>
-    <script src="js/settings.js" defer></script>
-
-    <link rel="stylesheet" href="bootstrap-5.3.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap-icons-1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/settings.css">
 </head>
 
 <body class="bg-dark text-light">
@@ -23,21 +20,39 @@
                 </button>
             </div>
             
-            <h5 class="settings-title mb-4">Einstellungen</h5>
+            <h5 class="settings-title mb-4" id="settings-title">Einstellungen</h5>
             
             <div class="mb-3">
-                <label for="apiKeyInput" class="form-label">OpenAI API-Schlüssel:</label>
+                <label for="apiKeyInput" class="form-label" id="apiKey-label">OpenAI API-Schlüssel:</label>
                 <input type="text" class="form-control focus-ring-dark" id="apiKeyInput" placeholder="API-Schlüssel eingeben">
+            </div>
+
+            <div class="mb-3">
+                <label for="languageSelect" class="form-label" id="language-label">Sprache:</label>
+                <select class="form-select focus-ring-dark" id="languageSelect">
+                    <!-- Wird dynamisch befüllt -->
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label for="presetSelect" class="form-label" id="preset-label">Stil der Faktenprüfung:</label>
+                <select class="form-select focus-ring-dark" id="presetSelect">
+                    <!-- Wird dynamisch aus der JSON-Datei befüllt -->
+                </select>
+                <div class="form-text p-2 rounded mt-2 border shadow-sm fst-italic bg-secondary bg-opacity-25 text-info border-info" id="presetDescription"></div>
             </div>
             
             <div class="d-grid speichern-button">
                 <button class="btn btn-primary action-button" id="save">
-                    <i class="bi bi-save me-2"></i>Speichern
+                    <i class="bi bi-save me-2"></i><span id="save-text-span">Speichern</span>
                 </button>
             </div>
         </div>
     </div>
 
-    <script src="bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript-Dateien am Ende des Body-Elements einfügen, damit das DOM zuerst geladen wird -->
+    <script src="./js/browser.js"></script>
+    <script src="./js/settings.js"></script>
 </body>
 </html>

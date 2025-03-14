@@ -30,6 +30,13 @@ function applyTheme(isLight) {
                 alertBox.classList.add('alert-primary');
             }
         });
+        
+        // Preset-Beschreibung für hellen Modus anpassen
+        const presetDescription = document.getElementById('presetDescription');
+        if (presetDescription) {
+            presetDescription.classList.remove('bg-secondary', 'text-info', 'border-info');
+            presetDescription.classList.add('bg-light', 'text-dark', 'border-dark');
+        }
     } else {
         // Dunkles Theme anwenden
         body.classList.remove('bg-light', 'text-dark');
@@ -48,14 +55,54 @@ function applyTheme(isLight) {
                 alertBox.classList.add('alert-info');
             }
         });
+        
+        // Preset-Beschreibung für dunklen Modus anpassen
+        const presetDescription = document.getElementById('presetDescription');
+        if (presetDescription) {
+            presetDescription.classList.remove('bg-light', 'text-dark', 'border-dark');
+            presetDescription.classList.add('bg-secondary', 'text-info', 'border-info');
+        }
     }
 }
 
 // Initial das Theme anwenden
 applyTheme(isLightMode);
 
-// Überprüfe, ob die Sprache Deutsch oder Englisch ist
-const isGerman = navigator.language.startsWith('de');
+// Funktion zur Erkennung der Browsersprache
+function detectBrowserLanguage() {
+    // Browsersprache abrufen
+    const browserLang = navigator.language.toLowerCase();
+    
+    // Prüfen, ob die Sprache Deutsch oder Englisch ist, sonst Englisch als Standard
+    if (browserLang.startsWith('de')) {
+        return 'de';
+    } else if (browserLang.startsWith('en')) {
+        return 'en';
+    } else {
+        return 'en'; // Standardsprache für alle anderen Sprachen ist Englisch
+    }
+}
+
+// Initial ermittelte Browsersprache
+let browserLanguage = detectBrowserLanguage();
+
+// Standard-Spracheinstellung basierend auf der Browsersprache
+let isGerman = browserLanguage === 'de';
+
+// Lade gespeicherte Spracheinstellung, falls vorhanden, sonst verwende Browser-Sprache
+chrome.storage.local.get(["selectedLanguage"], function (data) {
+    if (data.selectedLanguage) {
+        // Verwende die gespeicherte Spracheinstellung
+        isGerman = data.selectedLanguage === 'de';
+    } else {
+        // Beim ersten Start die Browsersprache verwenden und speichern
+        chrome.storage.local.set({ selectedLanguage: browserLanguage });
+        console.log("Browsersprache erkannt und gesetzt:", browserLanguage);
+    }
+    
+    // Wende die Sprache an, nachdem die Einstellung geladen wurde
+    applyLanguage(isGerman);
+});
 
 // Funktion zum Anwenden der entsprechenden Sprache
 function applyLanguage(isGerman) {

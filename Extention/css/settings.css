@@ -58,3 +58,17 @@ html, body {
 .speichern-button {
     margin-top: 30px;
 }
+
+/* Stil für die Preset-Beschreibung */
+#presetDescription {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    min-height: 50px;
+    transition: all 0.3s ease;
+    border-width: 1px !important;
+    border-opacity: 0.5 !important;
+}
+
+#presetDescription:empty {
+    display: none;
+}
