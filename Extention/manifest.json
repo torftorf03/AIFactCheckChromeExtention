@@ -1,9 +1,9 @@
 {
 "manifest_version": 3,
-"version": "1.0",
+"version": "0.2",
 "name": "AI Fact check",
 "action": {
     "default_popup": "popup.html"
 },
-"permissions": ["tabs", "scripting", "activeTab", "storage"]
+"permissions": ["scripting", "activeTab", "storage"]
 }
