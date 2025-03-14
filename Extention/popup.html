@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Fact Check</title>
 
-    <script src="js/browser.js" defer></script>
-    <script src="js/popup.js" defer></script>
-
-    <link rel="stylesheet" href="bootstrap-5.3.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap-icons-1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/popup.css">
 </head>
 
 <body class="bg-dark text-light">
@@ -25,12 +22,12 @@
             
             <div class="alert alert-info">
                 <i class="bi bi-info-circle me-2"></i>
-                <span class="fw-bold">Markieren Sie Text auf einer Webseite und klicken Sie auf "Überprüfen", um die Fakten zu prüfen.</span>
+                <span class="fw-bold" id="info-text">Markieren Sie Text auf einer Webseite und klicken Sie auf "Überprüfen", um die Fakten zu prüfen.</span>
             </div>
             
             <div class="d-grid ueberpruefen-button">
                 <button class="btn btn-primary action-button" id="check-btn">
-                    <i class="bi bi-search me-2"></i>Überprüfen
+                    <i class="bi bi-search me-2"></i><span id="check-text-span">Überprüfen</span>
                 </button>
             </div>
             
@@ -40,6 +37,9 @@
         </div>
     </div>
 
-    <script src="bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript-Dateien am Ende des Body-Elements einfügen, damit das DOM zuerst geladen wird -->
+    <script src="./js/browser.js"></script>
+    <script src="./js/popup.js"></script>
 </body>
 </html>

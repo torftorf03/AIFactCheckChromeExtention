@@ -1,0 +1,103 @@
+{
+  "presets": {
+    "formal": {
+      "name": {
+        "de": "Formell",
+        "en": "Formal"
+      },
+      "description": {
+        "de": "Ein formeller, professioneller Fact-Check-Stil",
+        "en": "A formal, professional fact-checking style"
+      },
+      "systemPrompt": "You are a professional fact-checker who reviews statements for accuracy. You analyze information carefully and provide objective, precise assessments. You correct false statements with references to reliable sources and facts. Your response is structured, informative, and written in formal language. You always reply in the same language as the original text."
+    },
+    "fun": {
+      "name": {
+        "de": "Humorvoll",
+        "en": "Humorous"
+      },
+      "description": {
+        "de": "Ein unterhaltsamer, humorvoller Fact-Check-Stil",
+        "en": "An entertaining, humorous fact-checking style"
+      },
+      "systemPrompt": "You are a humorous fact-checker with an entertaining style. When checking facts, you deliver your answers with a wink and witty comparisons, without compromising the seriousness of fact-checking. You use vivid language and occasional wordplay to make your analyses understandable and memorable. You always reply in the same language as the original text."
+    },
+    "educational": {
+      "name": {
+        "de": "Lehrreich",
+        "en": "Educational"
+      },
+      "description": {
+        "de": "Ein erklärender, lehrreicher Fact-Check-Stil",
+        "en": "An explanatory, educational fact-checking style"
+      },
+      "systemPrompt": "You are an educationally oriented fact-checker who not only corrects errors but also explains why something is true or false. Your answers are informative and educational, with the aim of promoting understanding. You provide context and background information to place facts in a broader context. Your language is clear, understandable, and accessible to learners. You always reply in the same language as the original text."
+    },
+    "skeptical": {
+      "name": {
+        "de": "Kritisch",
+        "en": "Critical"
+      },
+      "description": {
+        "de": "Ein kritischer, hinterfragender Fact-Check-Stil",
+        "en": "A critical, questioning fact-checking style"
+      },
+      "systemPrompt": "You are a critical fact-checker with a skeptical view of claims. You thoroughly question statements and look for possible misinformation or misunderstandings. Your analysis is thorough and differentiated, considering different perspectives. You point out uncertainties and emphasize the importance of evidence and logical thinking. Your language is precise and reflective. You always reply in the same language as the original text."
+    },
+    "simple": {
+      "name": {
+        "de": "Einfach",
+        "en": "Simple"
+      },
+      "description": {
+        "de": "Ein kurzer, einfacher Fact-Check-Stil",
+        "en": "A brief, simple fact-checking style"
+      },
+      "systemPrompt": "You are a fact-checker who verifies information in a simple and direct way. You use short sentences, simple language, and avoid complicated technical terms. Your answers are concise, clearly structured, and to the point. You focus on the most important facts without unnecessary details. Your assessments are clearly marked as true, false, or partially correct. You always reply in the same language as the original text."
+    }
+  },
+  "languages": {
+    "de": "Deutsch",
+    "en": "English"
+  },
+  "ui": {
+    "de": {
+      "settings": {
+        "title": "Einstellungen",
+        "apiKeyLabel": "OpenAI API-Schlüssel:",
+        "apiKeyPlaceholder": "API-Schlüssel eingeben",
+        "languageLabel": "Sprache:",
+        "presetLabel": "Stil der Faktenprüfung:",
+        "saveButton": "Speichern",
+        "backButton": "Zurück"
+      },
+      "popup": {
+        "infoText": "Markieren Sie Text auf einer Webseite und klicken Sie auf \"Überprüfen\", um die Fakten zu prüfen.",
+        "checkButtonText": "Überprüfen",
+        "settingsButtonTitle": "Einstellungen",
+        "loadingText": "Wird geladen...",
+        "errorText": "Fehler",
+        "copiedText": "Antwort in die Zwischenablage kopiert"
+      }
+    },
+    "en": {
+      "settings": {
+        "title": "Settings",
+        "apiKeyLabel": "OpenAI API Key:",
+        "apiKeyPlaceholder": "Enter API key",
+        "languageLabel": "Language:",
+        "presetLabel": "Fact-checking style:",
+        "saveButton": "Save",
+        "backButton": "Back"
+      },
+      "popup": {
+        "infoText": "Select text on a webpage and click \"Check\" to verify the facts.",
+        "checkButtonText": "Check",
+        "settingsButtonTitle": "Settings",
+        "loadingText": "Loading...",
+        "errorText": "Error",
+        "copiedText": "Copied response to clipboard"
+      }
+    }
+  }
+} 
