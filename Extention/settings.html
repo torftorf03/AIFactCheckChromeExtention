@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Settings</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fact Check - Einstellungen</title>
+
+    <script src="js/browser.js" defer></script>
+    <script src="js/settings.js" defer></script>
+
+    <link rel="stylesheet" href="bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/settings.css">
 </head>
-<body>
-  <div class="noPadding" style="width: 200px">
-      <div class="noPadding" style="display: flex">
-          <p>OpenAi Api Key: </p>
-          <input type="text" id="apiKeyInput" placeholder="API Key eingeben">
-      </div>
-    <button id="save">Speichern</button>
-  </div>
-<script src="settings.js"></script>
+
+<body class="bg-dark text-light">
+    <div class="main-container">
+        <div class="content-wrapper">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="text-primary m-0"><i class="bi bi-shield-check me-2"></i>AI Fact Check</h3>
+                <button class="btn btn-sm btn-outline-light rounded-circle" id="back-btn" title="Zurück">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+            </div>
+            
+            <h5 class="settings-title mb-4">Einstellungen</h5>
+            
+            <div class="mb-3">
+                <label for="apiKeyInput" class="form-label">OpenAI API-Schlüssel:</label>
+                <input type="text" class="form-control focus-ring-dark" id="apiKeyInput" placeholder="API-Schlüssel eingeben">
+            </div>
+            
+            <div class="d-grid speichern-button">
+                <button class="btn btn-primary action-button" id="save">
+                    <i class="bi bi-save me-2"></i>Speichern
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
