@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Fact Check</title>
-    <script src="popup.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
+
+    <script src="js/browser.js" defer></script>
+    <script src="js/popup.js" defer></script>
+
+    <link rel="stylesheet" href="bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/popup.css">
 </head>
-<body>
-    <div class="noPadding" style="display: flex; justify-content: flex-end; width: 100%;">
-        <button id="settings-btn" style="margin-bottom: 30px; padding: 2px; align-self: flex-end;">
-            <img src="img/settings.png" style="height: 20px; margin: 2px;">
-        </button>
+
+<body class="bg-dark text-light">
+    <div class="main-container">
+        <div class="content-wrapper">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="text-primary m-0"><i class="bi bi-shield-check me-2"></i>AI Fact Check</h3>
+                <button class="btn btn-sm btn-outline-light rounded-circle" id="settings-btn" title="Einstellungen">
+                    <i class="bi bi-gear-fill"></i>
+                </button>
+            </div>
+            
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle me-2"></i>
+                <span class="fw-bold">Markieren Sie Text auf einer Webseite und klicken Sie auf "Überprüfen", um die Fakten zu prüfen.</span>
+            </div>
+            
+            <div class="d-grid" style="margin-top: 30px;">
+                <button class="btn btn-primary action-button" id="check-btn">
+                    <i class="bi bi-search me-2"></i>Überprüfen
+                </button>
+            </div>
+            
+            <div class="text-center status-text">
+                <p id="status" class="text-info"></p>
+            </div>
+        </div>
     </div>
-    <div class="noPadding" style="width: 200px">
-        <button id="save-btn">Check</button>
-        <p id="status"></p>
-    </div>
+
+    <script src="bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
