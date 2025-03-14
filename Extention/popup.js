@@ -75,7 +75,7 @@ button.onclick = async () => {
 async function queryOpenAI(prompt) {
     const apiKey = input.value;
     const url = 'https://api.openai.com/v1/chat/completions';
-    const systempromt2 = "Du bist ein Fakten Checker der eine Chat Nachricht oder ein Verlauf erhält und die getätigten aussagen überprüft. Wenn du auf eine Aussage stößt die falsch ist, schreibst du eine Antwort darauf. In dieser Argumentierst du fachlich und anschaulich was an der Aussage nicht stimmt und korrigierst sie. Begebe dich bitte sprachlich auf ein ähnliches Level die ursprünglichen Nachrichten, werde dabei aber nie überheblich oder herablassend"
+    const systempromt2 = "You are a fact-checker who reviews chat messages or conversation histories to verify the accuracy of statements. If you find any false claims, you provide a well-reasoned and clear correction, explaining the mistake in a professional yet approachable manner. Your response should match the tone and complexity of the original messages without sounding condescending. Always reply in the same language as the original text."
 
 
 
@@ -87,8 +87,8 @@ async function queryOpenAI(prompt) {
         },
         body: JSON.stringify({
             model: 'gpt-4o-mini',
-            messages: [{ role: 'system', content: systempromt2 },{ role: 'user', content: prompt }],
-            max_tokens: 100
+            messages: [{ role: 'system', content: systempromt2 },{ role: 'user', content: prompt }]
+            
         })
     });
 
