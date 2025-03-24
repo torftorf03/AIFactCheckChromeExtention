@@ -38,21 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
         for (const [name, element] of Object.entries(elements)) {
             if (!element) {
                 missingElements.push(name);
-                console.error(`Element nicht gefunden: ${name}`);
             }
         }
         
         if (missingElements.length > 0) {
-            console.error("Fehlende DOM-Elemente: " + missingElements.join(", "));
             return false;
         }
         
         return true;
-    }
-
-    // Nur fortfahren, wenn alle DOM-Elemente vorhanden sind
-    if (!checkDOMElements()) {
-        console.error("Die Anwendung kann nicht vollständig gestartet werden, fehlende DOM-Elemente werden ignoriert.");
     }
 
     // Trotz fehlender Elemente fortfahren, wir haben Fallbacks eingebaut
